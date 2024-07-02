@@ -1,4 +1,4 @@
-Here's your README with additional ASCII box decorations for the code snippets:
+Sure, here's a detailed and well-structured README for your GitHub project:
 
 ---
 
@@ -55,31 +55,21 @@ SuperSuciveApi
 
 1. **Clone the repository**:
 
-
-   ```
-   ┌─────────────────────────────────────────────────────────────┐
-   │ git clone https://github.com/lucianorosalasiu/SuperSuciveApi │
-   │ cd SuperSuciveApi                                            │
-   └─────────────────────────────────────────────────────────────┘
+   ```sh
+   git clone https://github.com/yourusername/SuperSuciveApi.git
+   cd SuperSuciveApi
    ```
 
 2. **Build the project**:
 
-
-   ```
-   ┌──────────────────────────┐
-   │ mvn clean install        │
-   └──────────────────────────┘
+   ```sh
+   mvn clean install
    ```
 
 3. **Deploy the application on WildFly**:
 
-
-
-   ```
-   ┌──────────────────────────┐
-   │ mvn wildfly:deploy       │
-   └──────────────────────────┘
+   ```sh
+   mvn wildfly:deploy
    ```
 
 ## 🌐 SOAP Web Service
@@ -95,56 +85,41 @@ http://localhost:8080/SuciveMockU-1.0-SNAPSHOT/SuciveImp?wsdl
 
 Here is an example of a SOAP request to submit a payment:
 
-
-
-```
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://unknown.namespace/">        │
-│    <soapenv:Header/>                                                                                                     │
-│    <soapenv:Body>                                                                                                        │
-│       <ns:SubmitPayment>                                                                                                 │
-│          <arg0>ABC123</arg0>                                                                                             │
-│          <arg1>123.45</arg1>                                                                                             │
-│       </ns:SubmitPayment>                                                                                                │
-│    </soapenv:Body>                                                                                                       │
-│ </soapenv:Envelope>                                                                                                      │
-└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://unknown.namespace/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:SubmitPayment>
+         <arg0>ABC123</arg0>
+         <arg1>123.45</arg1>
+      </ns:SubmitPayment>
+   </soapenv:Body>
+</soapenv:Envelope>
 ```
 
 ### Example SOAP Response
 
 If the service processes the payment successfully, the response will be:
 
-
-
-```
-┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">                                             │
-│    <soapenv:Header/>                                                                                                     │
-│    <soapenv:Body>                                                                                                        │
-│       <ns:SubmitPaymentResponse xmlns:ns="http://unknown.namespace/">                                                    │
-│          <ns:return>Payment processed successfully.</ns:return>                                                         │
-│       </ns:SubmitPaymentResponse>                                                                                        │
-│    </soapenv:Body>                                                                                                       │
-│ </soapenv:Envelope>                                                                                                      │
-└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:SubmitPaymentResponse xmlns:ns="http://unknown.namespace/">
+         <ns:return>Payment processed successfully.</ns:return>
+      </ns:SubmitPaymentResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
 ```
 
 ## 🧪 Running Tests
 
 To run the unit tests, use the following command:
 
-
-```
-┌──────────────────────────┐
-│ mvn test                 │
-└──────────────────────────┘
+```sh
+mvn test
 ```
 
 ## 🎉 Conclusion
 
 This project demonstrates a basic implementation of a SOAP web service using Jakarta EE, Maven, and WildFly. Feel free to explore and contribute to enhance the functionality!
-
----
-
-Feel free to replace `lucianorosalasiu` with your actual GitHub username or repository URL if needed. This README should give a comprehensive overview of your project, including how to set it up and use it.
